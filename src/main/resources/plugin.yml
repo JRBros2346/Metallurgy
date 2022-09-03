@@ -8,7 +8,7 @@ author: JRBros2346
 description: A Slimefun Addon with Realistic metallurgy!! No RTX or Shaders!! -By JRBros2346
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
-main: me.CHANGEME.slimefunaddon.ExampleAddon
+main: me.jrbros.metallurgy.Metallurgy
 
 ## You can change this to link to your website or repository. You can also remove this line if you want to.
 website: https://github.com/JRBros2346/Metallurgy
