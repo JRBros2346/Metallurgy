@@ -28,18 +28,18 @@ public class Metallurgy extends JavaPlugin implements SlimefunAddon {
          * 1. Creating a new Category
          * This Category will use the following ItemStack
          */
-        ItemStack itemGroupItem = new CustomItemStack(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+        CustomItemStack compoundsItem = new CustomItemStack(Material.SUGAR, "&4Compounds", "", "&a> Click to open");
 
         // Give your Category a unique id.
-        NamespacedKey itemGroupId = new NamespacedKey(this, "addon_category");
-        ItemGroup itemGroup = new ItemGroup(itemGroupId, itemGroupItem);
+        NamespacedKey compoundsId = new NamespacedKey(this, "compounds");
+        ItemGroup compounds = new ItemGroup(compoundsId, compoundsItem);
 
         /*
          * 2. Create a new SlimefunItemStack
          * This class has many constructors, it is very important
          * that you give each item a unique id.
          */
-        SlimefunItemStack slimefunItem = new SlimefunItemStack("COOL_DIAMOND", Material.DIAMOND, "&4Cool Diamond", "&c+20% Coolness");
+        SlimefunItemStack lime = new SlimefunItemStack("CaO", Material.SUGAR, "Lime");
 
         /*
          * 3. Creating a Recipe
@@ -57,7 +57,7 @@ public class Metallurgy extends JavaPlugin implements SlimefunAddon {
          * which this item is crafted in.
          * Recipe Types from Slimefun itself will automatically add the recipe to that machine.
          */
-        SlimefunItem item = new SlimefunItem(itemGroup, slimefunItem, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
+        SlimefunItem item = new SlimefunItem(compounds, lime, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         item.register(this);
     }
 
